@@ -1,0 +1,513 @@
+Microsoft Windows [Version 10.0.22631.6199]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Asus Vivobook>CD\;
+The system cannot find the path specified.
+
+C:\Users\Asus Vivobook>cd c:\xampp\mysql\bin
+
+c:\xampp\mysql\bin>mysql.exe -uroot -hlocalhost -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show database
+    ->
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'database' at line 1
+MariaDB [(none)]> create database latihan11;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [(none)]> mysql>show databases;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql>show databases' at line 1
+MariaDB [(none)]> use latihan11;
+Database changed
+MariaDB [latihan11]> mysql> create table mahasiswa;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql> create table mahasiswa' at line 1
+MariaDB [latihan11]> mysql> create table mahasiswa
+    -> (nopeg INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    -> nama VARCHAR(50) NOT NULL)
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql> create table mahasiswa
+(nopeg INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,...' at line 1
+MariaDB [latihan11]> mysql> create table mahasiswa
+    -> (nopeg INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    ->
+    ->
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'mysql> create table mahasiswa
+(nopeg INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,' at line 1
+MariaDB [latihan11]> create table mahasiswa
+    -> (nopeg INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    -> nama VARCHAR(50) NOT NULL)
+    -> ;
+Query OK, 0 rows affected (0.007 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| mahasiswa           |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> describe mahasiswa;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| nopeg | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| nama  | varchar(50)      | NO   |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.012 sec)
+
+MariaDB [latihan11]> show columns from mahasiswa;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| nopeg | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| nama  | varchar(50)      | NO   |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.010 sec)
+
+MariaDB [latihan11]> create table contoh1
+    -> (noid INT)
+    -> ;
+Query OK, 0 rows affected (0.014 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| contoh1             |
+| mahasiswa           |
++---------------------+
+2 rows in set (0.001 sec)
+
+MariaDB [latihan11]> drop table contoh1;
+Query OK, 0 rows affected (0.035 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| mahasiswa           |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]>
+MariaDB [latihan11]> quit
+Bye
+
+c:\xampp\mysql\bin>mysql.exe -uroot -hlocalhost -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 9
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database dbKursus
+    -> ;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> use dbKursus;
+Database changed
+MariaDB [dbKursus]> show database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'database' at line 1
+MariaDB [dbKursus]> show database
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'database' at line 1
+MariaDB [dbKursus]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dbkursus           |
+| information_schema |
+| latihan11          |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+7 rows in set (0.022 sec)
+
+MariaDB [dbKursus]> create table peserta (
+    -> nomor Char(8) Not Null Primary Key,
+    -> nama VarChar(20) Not Null,
+    -> email VarChar(30) Null,
+    -> alamat VarChar (20) Not Null,
+    -> nama VarChar(20) Not Null,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+MariaDB [dbKursus]> create table peserta (
+    -> nomor Char(8) Not Null Primary Key,
+    -> nama VarChar(20) Not Null,
+    -> email VarChar(30) Null,
+    -> alamat VarChar(20) Not Null,
+    -> kota VarChar(10) Not Null,
+    -> ) ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 7
+MariaDB [dbKursus]> create table peserta (
+    -> nomor Char(8) Not Null Primary Key,
+    -> nama VarChar(20) Not Null,
+    -> email VarChar(30) Null,
+    -> alamat VarChar(20) Not Null,
+    -> kota VarChar(10) Not Null,
+    -> )
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 7
+MariaDB [dbKursus]> quit
+Bye
+
+c:\xampp\mysql\bin>mysql.exe -uroot -hlocalhost -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 10.4.32-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| dbkursus           |
+| information_schema |
+| latihan11          |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [(none)]> use latihan11;
+Database changed
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| mahasiswa           |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> alter table mahasiswa
+    -> rename karyawan;
+Query OK, 0 rows affected (0.007 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| karyawan            |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> desc karyawan;
++-------+------------------+------+-----+---------+----------------+
+| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+
+| nopeg | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| nama  | varchar(50)      | NO   |     | NULL    |                |
++-------+------------------+------+-----+---------+----------------+
+2 rows in set (0.010 sec)
+
+MariaDB [latihan11]> ALTER TABLE karyawan
+    -> ADD jenkelamin CHAR(2) NOT NULL,
+    -> ADD kota VARCHAR(25) NOT NULL,
+    -> ADD kodepos CHAR(5) NOT NULL,
+    -> ADD tgllahir DATE
+    -> ;
+Query OK, 0 rows affected (0.006 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> desc karyawan;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| nopeg      | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| nama       | varchar(50)      | NO   |     | NULL    |                |
+| jenkelamin | char(2)          | NO   |     | NULL    |                |
+| kota       | varchar(25)      | NO   |     | NULL    |                |
+| kodepos    | char(5)          | NO   |     | NULL    |                |
+| tgllahir   | date             | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.011 sec)
+
+MariaDB [latihan11]> ALTER TABLE karyawan MODIFY jenkelamin Char(1);
+Query OK, 0 rows affected (0.024 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| karyawan            |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> desc karyawan;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| nopeg      | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| nama       | varchar(50)      | NO   |     | NULL    |                |
+| jenkelamin | char(1)          | YES  |     | NULL    |                |
+| kota       | varchar(25)      | NO   |     | NULL    |                |
+| kodepos    | char(5)          | NO   |     | NULL    |                |
+| tgllahir   | date             | YES  |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.011 sec)
+
+MariaDB [latihan11]> alter table karyawan
+    -> change jenkelamin jenkel char(1);
+Query OK, 0 rows affected (0.008 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> alter table karyawan
+    -> change nopeg noid int(10) auto_increment
+    -> ;
+Query OK, 0 rows affected (0.023 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> desc karyawan;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| noid     | int(10)     | NO   | PRI | NULL    | auto_increment |
+| nama     | varchar(50) | NO   |     | NULL    |                |
+| jenkel   | char(1)     | YES  |     | NULL    |                |
+| kota     | varchar(25) | NO   |     | NULL    |                |
+| kodepos  | char(5)     | NO   |     | NULL    |                |
+| tgllahir | date        | YES  |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+6 rows in set (0.014 sec)
+
+MariaDB [latihan11]> alter table karyawan
+    -> rename pegawai;
+Query OK, 0 rows affected (0.007 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| pegawai             |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> rename table pegawai
+    -> to karyawan;
+Query OK, 0 rows affected (0.008 sec)
+
+MariaDB [latihan11]> show tables;
++---------------------+
+| Tables_in_latihan11 |
++---------------------+
+| karyawan            |
++---------------------+
+1 row in set (0.001 sec)
+
+MariaDB [latihan11]> insert into karyawan
+    -> (nama, jenkel, kota, kodepos, tgllahir)
+    -> values
+    -> ("Ahmad Zobari", "L", "Bandung", "41011", "1977-10-02")
+    -> ;
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [latihan11]> insert into karyawan
+    -> (nama, jenkel, kota, kodepos, tgllahir)
+    -> ("Sundariwati", "P", "Bandung", "40123", "1978-11-12")
+    -> ("Ryan Cakep", "L", "Jakarta", "12111", "1981-03-21")
+    -> ("Zukarman", "L", "Bekasi", "17211", "1978-08-10")
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '"Sundariwati", "P", "Bandung", "40123", "1978-11-12")
+("Ryan Cakep", "L", "Ja...' at line 3
+MariaDB [latihan11]> insert into karyawan
+    -> (nama, jenkel, kota, kodepos, tgllahir)
+    -> values
+    -> ("Sundariwati", "P", "Bandung", "40123", "1978-11-12")
+    -> ("Ryan Cakep", "L", "Jakarta", "12111", "1981-03-21")
+    -> ("Zukarman", "L", "Bekasi", "17211", "1978-08-10")
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '("Ryan Cakep", "L", "Jakarta", "12111", "1981-03-21")
+("Zukarman", "L", "Beka...' at line 5
+MariaDB [latihan11]> insert into karyawan
+    -> (nama, jenkel, kota, kodepos, tgllahir)
+    -> values
+    -> ("Sundariwati", "P", "Bandung", "40123", "1978-11-12"),
+    -> ("Ryan Cakep", "L", "Jakarta", "12111", "1981-03-21"),
+    -> ("Zukarman", "L", "Bekasi", "17211", "1978-08-10")
+    -> ;
+Query OK, 3 rows affected (0.003 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> insert into karyawan
+    -> set nama="Yuliawati",
+    -> jenkel="P",
+    -> kota="Bogor",
+    -> kodepos="00000",
+    -> tgllahir="1982-06-09"
+    -> ;
+Query OK, 1 row affected (0.003 sec)
+
+MariaDB [latihan11]> insert into karyawan
+    -> values ("Mawar","P","Bogor","12345","1985-07-07")
+    -> ;
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+MariaDB [latihan11]> insert into karyawan
+    -> values ("NULL","Mawar","P","Bogor","12345","1985-07-07")
+    -> ;
+Query OK, 1 row affected, 1 warning (0.003 sec)
+
+MariaDB [latihan11]> select * from karyawan;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.001 sec)
+
+MariaDB [latihan11]> select nama, jenkel from karyawan;
++--------------+--------+
+| nama         | jenkel |
++--------------+--------+
+| Ahmad Zobari | L      |
+| Sundariwati  | P      |
+| Ryan Cakep   | L      |
+| Zukarman     | L      |
+| Yuliawati    | P      |
+| Mawar        | P      |
++--------------+--------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]> select nama, jenkel from karyawan
+    -> where jenkel="p"
+    -> ;
++-------------+--------+
+| nama        | jenkel |
++-------------+--------+
+| Sundariwati | P      |
+| Yuliawati   | P      |
+| Mawar       | P      |
++-------------+--------+
+3 rows in set (0.001 sec)
+
+MariaDB [latihan11]> select * from karyawan
+    -> order by nama;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.001 sec)
+
+MariaDB [latihan11]> select * from karyawan
+    -> order by kota;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]> select * from karyawan
+    -> order by tgllahir;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]> select * from karyawan
+    -> order by nama DESC;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]> select * from karyawan
+    -> order by tgllahir DESC;
++------+--------------+--------+---------+---------+------------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   |
++------+--------------+--------+---------+---------+------------+
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |
++------+--------------+--------+---------+---------+------------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]> alter table karyawan
+    -> ADD gaji INT(12) NOT NULL default 0
+    -> ;
+Query OK, 0 rows affected (0.010 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [latihan11]> describe karyawan;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| noid     | int(10)     | NO   | PRI | NULL    | auto_increment |
+| nama     | varchar(50) | NO   |     | NULL    |                |
+| jenkel   | char(1)     | YES  |     | NULL    |                |
+| kota     | varchar(25) | NO   |     | NULL    |                |
+| kodepos  | char(5)     | NO   |     | NULL    |                |
+| tgllahir | date        | YES  |     | NULL    |                |
+| gaji     | int(12)     | NO   |     | 0       |                |
++----------+-------------+------+-----+---------+----------------+
+7 rows in set (0.016 sec)
+
+MariaDB [latihan11]> select * from karyawan;
++------+--------------+--------+---------+---------+------------+------+
+| noid | nama         | jenkel | kota    | kodepos | tgllahir   | gaji |
++------+--------------+--------+---------+---------+------------+------+
+|    1 | Ahmad Zobari | L      | Bandung | 41011   | 1977-10-02 |    0 |
+|    2 | Sundariwati  | P      | Bandung | 40123   | 1978-11-12 |    0 |
+|    3 | Ryan Cakep   | L      | Jakarta | 12111   | 1981-03-21 |    0 |
+|    4 | Zukarman     | L      | Bekasi  | 17211   | 1978-08-10 |    0 |
+|    5 | Yuliawati    | P      | Bogor   | 00000   | 1982-06-09 |    0 |
+|    6 | Mawar        | P      | Bogor   | 12345   | 1985-07-07 |    0 |
++------+--------------+--------+---------+---------+------------+------+
+6 rows in set (0.000 sec)
+
+MariaDB [latihan11]>
